@@ -2,7 +2,6 @@ export function calculPoints(dices : [number,number,number,number,number]) {
     let points = 0;
     dices.sort();
     let isStraight = true;
-
     if (dices[0] === dices[4]) {
         // YAMS
         return 50;
@@ -14,7 +13,10 @@ export function calculPoints(dices : [number,number,number,number,number]) {
     }
 
     if(dices[0] === dices[2] || dices[1] == dices[3] || dices[2] === dices[4]){
-        // Brelan
+        if (dices[0] === dices[2] && dices[3] === dices[4] || 
+            dices[2] === dices[4] && dices[0] === dices[1]
+        )
+            return 30;
         return 28;
     }
 
