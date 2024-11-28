@@ -1,5 +1,19 @@
-export function calculPoints(dices : [number,number,number,number,number]) {
-    dices.sort();
+export class Jet {
+    private dices : number[];
+    constructor(dices : number[]){
+        this.dices = dices;
+    }
+
+    getDices(){
+        return this.dices;
+    }
+}
+
+export function calculPoints(jets : Jet[]) {
+    
+    let dices = jets[0].getDices();
+
+    dices.sort((a,b) => a - b);
     if (dices[0] === dices[4]) return 50;
 
     if(dices[0] === dices[3] || dices[1] === dices[4]) return 35;
