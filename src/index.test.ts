@@ -21,4 +21,8 @@ describe('calculPoints', () => {
     it('should return 28 if dices are 1,1,1,2,3 meaing Brelan', () => {
         expect(calculPoints([1,1,1,2,3])).toBe(28);
     })
+
+    it('should return 30 if dices are 1,1,1,2,2 meaning Fullhouse', () => {
+        expect(calculPoints([1,1,1,2,2])).toBe(30);
+    });
 });
