@@ -9,7 +9,13 @@ export function calculPoints(dices : [number,number,number,number,number]) {
     }
 
     if(dices[0] === dices[3] || dices[1] === dices[4]){
+        // Carre
         return 35;
+    }
+
+    if(dices[0] === dices[2] || dices[1] == dices[3] || dices[2] === dices[4]){
+        // Brelan
+        return 28;
     }
 
     for (let i = 0; i < dices.length - 1; i++){
