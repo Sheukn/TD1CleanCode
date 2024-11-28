@@ -12,5 +12,9 @@ describe('calculPoints', () => {
 
     it('should return 40 if dices are 1,2,3,4,5', () => {
         expect(calculPoints([1,2,3,4,5])).toBe(40);
-    })
+    });
+
+    it('should return 20 if dices are 1,1,1,1,6', () => {
+        expect(calculPoints([1,1,1,1,6])).toBe(35);
+    });
 });
